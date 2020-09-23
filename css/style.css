@@ -6471,7 +6471,8 @@ strong {
 .header-accord-active {
   top: 26px;
   -webkit-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s; 
+}
   .header-accord-active a {
     opacity: 1; }
 

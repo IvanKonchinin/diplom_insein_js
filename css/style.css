@@ -6481,3 +6481,10 @@ strong {
 
 .slider-dots {
   display: none; }
+
+.show-phone-header-wrap{
+  position: relative;
+}  
+.header-contacts__phone-number-accord a.show-phone-header-link{
+  opacity: 1;
+}

@@ -4,6 +4,8 @@ import 'nodelist-foreach-polyfill';
 import elementClosest from 'element-closest';
 elementClosest(window);
 
-import one from './modules/one';
+import phoneList from './modules/phoneList';
+import toggleMenu from './modules/toggleMenu';
 
-one();
+phoneList();
+toggleMenu();

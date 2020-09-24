@@ -6,6 +6,8 @@ elementClosest(window);
 
 import phoneList from './modules/phoneList';
 import toggleMenu from './modules/toggleMenu';
+import popupRepairTypesModal from './modules/popupRepairTypesModal';
 
 phoneList();
 toggleMenu();
+popupRepairTypesModal();

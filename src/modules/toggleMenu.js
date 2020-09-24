@@ -30,7 +30,7 @@ const toggleMenu = () => {
       popupMenu.style.visibility = 'hidden';
       handlerMenu();
     }
-    if ((target.tagName === 'A' && target.closest('popupDialogMenu')) || target.closest('a') && target.closest('.popup-menu')) {
+    if ((target.tagName === 'A' && target.closest('popup-menu-nav__item')) || target.closest('a') && target.closest('.popup-menu-nav__item')) {
       scrollMenuItems(e);
       popupMenu.style.visibility = 'hidden';
       handlerMenu();

@@ -6489,3 +6489,8 @@ strong {
 .header-contacts__phone-number-accord a.show-phone-header-link{
   opacity: 1;
 }
+
+.popup-repair-types-show{
+  visibility: visible;
+}
+  

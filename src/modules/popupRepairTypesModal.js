@@ -10,7 +10,7 @@ const popupRepairTypesModal = () => {
       popupDialogMenu.classList.remove('showHide-menu');
       popup.style.visibility = 'hidden';
     }
-    if(target.matches('.close')){
+    if (target.matches('.close') && target.closest('.popup-repair-types')) {
       popupRepairModal.classList.toggle('popup-repair-types-show');
     }
   });

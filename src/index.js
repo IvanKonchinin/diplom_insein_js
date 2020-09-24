@@ -8,8 +8,10 @@ import phoneList from './modules/phoneList';
 import toggleMenu from './modules/toggleMenu';
 import popupRepairTypesModal from './modules/popupRepairTypesModal';
 import maskPhone from './modules/maskPhone';
+import policyPrivacy from './modules/policyPrivacy';
 
 phoneList();
 toggleMenu();
 popupRepairTypesModal();
 maskPhone('input[name="phone"]', '+7(___) ___-__-__');
+policyPrivacy();

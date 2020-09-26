@@ -18,6 +18,7 @@ import portfolioSliderDesctop from './modules/portfolioSliderDesctop';
 import portfolioSliderMobile from './modules/portfolioSliderMobile';
 import popupPortfolio from './modules/popupPortfolio';
 import popupPortfolioSlider from './modules/popupPortfolioSlider';
+import transparencySlider from './modules/transparencySlider';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -33,5 +34,6 @@ portfolioSliderDesctop();
 portfolioSliderMobile();
 popupPortfolio();
 popupPortfolioSlider();
+transparencySlider();
 
 

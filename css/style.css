@@ -1750,7 +1750,12 @@ div.wave-block:nth-child(17):after {
         margin-right: auto; } }
     @media (max-width: 1024px) {
       .transparency-item {
-        width: auto; } }
+        width: auto; 
+      display: none;}
+      .transparency-item-show{
+        display: flex;
+      }
+      }
     .transparency-item__title {
       margin-top: 27px;
       font-weight: 900;

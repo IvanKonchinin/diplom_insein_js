@@ -16,6 +16,8 @@ import repairTypesMenu from './modules/repairTypesMenu';
 import repireSliderMobile from './modules/repireSliderMobile';
 import portfolioSliderDesctop from './modules/portfolioSliderDesctop';
 import portfolioSliderMobile from './modules/portfolioSliderMobile';
+import popupPortfolio from './modules/popupPortfolio';
+import popupPortfolioSlider from './modules/popupPortfolioSlider';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -29,5 +31,7 @@ startSliders();
 repireSliderMobile();
 portfolioSliderDesctop();
 portfolioSliderMobile();
+popupPortfolio();
+popupPortfolioSlider();
 
 

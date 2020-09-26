@@ -6568,5 +6568,11 @@ strong {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
+.popup-transparency-slider__slide {
+  display: none;
+}
+.popup-transparency-slider__slide-show{
+  display: block;
+}
 
   

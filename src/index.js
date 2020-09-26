@@ -14,6 +14,8 @@ import repairTypesMenu from './modules/repairTypesMenu';
 //import RepairTypesSlider from './modules/RepairTypesSlider';
 //import startSliders from './modules/startSliders';
 import repireSliderMobile from './modules/repireSliderMobile';
+import portfolioSliderDesctop from './modules/portfolioSliderDesctop';
+import portfolioSliderMobile from './modules/portfolioSliderMobile';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -25,5 +27,7 @@ policyPrivacy();
 repairTypesMenu();
 startSliders();
 repireSliderMobile();
+portfolioSliderDesctop();
+portfolioSliderMobile();
 
 

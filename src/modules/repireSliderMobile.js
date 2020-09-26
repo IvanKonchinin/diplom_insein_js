@@ -49,11 +49,8 @@ const repireSliderMobile = () => {
 
    const checkBtn = () => {
       let itemWidthArr = slidesWidth();
-
       navArrowRepairLeftBase.disabled = position === 0;
       navArrowRepairRightBase.disabled = position <= -(itemWidthArr.reduce(function (a, b) {return (a + b)}) - itemWidthArr[itemWidthArr.length - 1]);
-      console.log(position);
-      console.log(-(itemWidthArr.reduce(function (a, b) {return (a + b)})) + itemWidthArr[itemWidthArr.length - 1]);
    };
    checkBtn();
 }

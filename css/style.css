@@ -864,6 +864,8 @@ template, [hidden] {
     text-align: center;
     color: #000000;
     z-index: 0; }
+
+     
     .formula-item strong {
       font-weight: 500; }
     .formula-item__descr {
@@ -960,7 +962,13 @@ template, [hidden] {
       @media (max-width: 1024px) {
         .formula-item-popup:before {
           -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); } }
+          transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+} }
+
+
       @media (max-width: 575px) {
         .formula-item-popup:before {
           max-width: 290px; } }
@@ -1065,7 +1073,14 @@ template, [hidden] {
             .formula-item-popup-06:before {
               background: url("../images/formula/item_popup_1.svg") no-repeat;
               background-size: contain; } }
+.formula-item-popup.active:before {
 
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
 .repair-types {
   position: relative;
   padding: 100px 0;
@@ -5133,6 +5148,7 @@ div.wave-block:nth-child(17):after {
   box-shadow: 0px 3.05528px 15.2764px rgba(50, 40, 35, 0.1);
   background: #ffffff;
   cursor: pointer;
+  border:none;
   z-index: 5; }
   @media (max-width: 575px) {
     .slider-arrow {
@@ -5164,7 +5180,18 @@ div.wave-block:nth-child(17):after {
     .slider-arrow-tablet-mobile:hover svg path {
       stroke-opacity: 1; }
   .slider-arrow:disabled {
-    border: none; }
+    border: none;opacity: 0.5; 
+    cursor:default;
+  }
+  .slider-arrow:disabled:hover{
+    background:#fff;
+    box-shadow:0 5px 25px #d3d3d3;
+    opacity: 0.5;
+  }
+  .slider-arrow:disabled:hover svg path{
+    fill:#000000;
+    opacity: 0.8;
+  }
   .slider-arrow:hover {
     background: -webkit-gradient(linear, left top, right top, from(#F48922), to(#FFB015));
     background: linear-gradient(90deg, #F48922 0%, #FFB015 100%);
@@ -5327,8 +5354,12 @@ div.wave-block:nth-child(17):after {
     .nav-arrow:hover svg path {
       stroke-width: 2; }
     .nav-arrow_left {
+      border:none;
+      background: none;
       left: 0; }
     .nav-arrow_right {
+      border:none;
+      background: none;
       right: 0; }
     .nav-arrow:after {
       position: absolute;
@@ -6493,4 +6524,22 @@ strong {
 .popup-repair-types-show{
   visibility: visible;
 }
+.repair-types-slider .hide {
+  display:none;
+}
+.repair-types-slider .show {
+  display: flex;
+}
+.types-repair-content{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
   

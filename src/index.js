@@ -9,9 +9,21 @@ import toggleMenu from './modules/toggleMenu';
 import popupRepairTypesModal from './modules/popupRepairTypesModal';
 import maskPhone from './modules/maskPhone';
 import policyPrivacy from './modules/policyPrivacy';
+import formulaItemPopup from './modules/formulaItemPopup';
+import repairTypesMenu from './modules/repairTypesMenu';
+//import RepairTypesSlider from './modules/RepairTypesSlider';
+//import startSliders from './modules/startSliders';
+import repireSliderMobile from './modules/repireSliderMobile';
+
+import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
 phoneList();
 toggleMenu();
 popupRepairTypesModal();
 maskPhone('input[name="phone"]', '+7(___) ___-__-__');
 policyPrivacy();
+repairTypesMenu();
+startSliders();
+repireSliderMobile();
+
+

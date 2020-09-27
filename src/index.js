@@ -21,6 +21,7 @@ import popupPortfolioSlider from './modules/popupPortfolioSlider';
 import transparencySlider from './modules/transparencySlider';
 import popupTransparency from './modules/popupTransparency';
 import popupTransparencySlider from './modules/popupTransparencySlider';
+import startProblemsPopup from './modules/startProblemsPopup';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -39,5 +40,6 @@ popupPortfolioSlider();
 transparencySlider();
 popupTransparency();
 popupTransparencySlider();
+startProblemsPopup();
 
 

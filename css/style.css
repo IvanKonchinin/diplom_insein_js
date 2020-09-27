@@ -2180,6 +2180,7 @@ div.wave-block:nth-child(17):after {
         @media (min-width: 1025px) {
           /* .problems-item-popup-1 { */
             /* top: 0px; } } */
+          }
         @media (max-width: 575px) {
           .problems-item-popup-1 {
             top: 190px; } }

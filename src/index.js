@@ -22,6 +22,8 @@ import transparencySlider from './modules/transparencySlider';
 import popupTransparency from './modules/popupTransparency';
 import popupTransparencySlider from './modules/popupTransparencySlider';
 import startProblemsPopup from './modules/startProblemsPopup';
+import tabs from './modules/disainTabs';
+import disainSliderMobile from './modules/disainSliderMobile';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -41,5 +43,7 @@ transparencySlider();
 popupTransparency();
 popupTransparencySlider();
 startProblemsPopup();
+tabs();
+disainSliderMobile();
 
 

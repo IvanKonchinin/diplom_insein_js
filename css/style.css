@@ -5340,7 +5340,9 @@ div.wave-block:nth-child(17):after {
           min-width: 2840px; } }
     @media (max-width: 575px) {
       .nav-list-designs {
-        min-width: 900px; } }
+        min-width: 900px;  
+      } 
+    }
     .nav-list_vertical {
       width: 319px;
       margin-left: auto;

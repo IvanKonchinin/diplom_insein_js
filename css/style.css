@@ -4035,7 +4035,8 @@ div.wave-block:nth-child(17):after {
       .popup-repair-types-content__head-title {
         width: 500px;
         font-weight: 500;
-        font-size: 28px; }
+        font-size: 28px;
+      display: none; }
         @media (max-width: 1024px) {
           .popup-repair-types-content__head-title {
             font-size: 20px; } }
@@ -4121,6 +4122,12 @@ div.wave-block:nth-child(17):after {
             margin-left: -8px;
             -webkit-transform: scaleX(1.6);
             transform: scaleX(1.6); }
+     .popup-repair-types-content-table .hide{
+        display: none;
+     }  
+      .popup-repair-types-content-table .show {
+        display: block;
+      }
     .popup-repair-types-content-table {
       position: relative;
       width: 100%;
@@ -4285,6 +4292,7 @@ div.wave-block:nth-child(17):after {
                   display: none; } }
       .popup-repair-types-content-table__list {
         border: 1px solid #FFFFFF;
+        display: none;
         width: 100%;
         height: 100%;
         max-width: 674px;

@@ -119,18 +119,18 @@ const setDataTable = (data) => {
 
 
 const popupRepairTypesModal = () => {
-  const popupRepairModal = document.querySelector('.popup-repair-types'),
-        popupDialogMenu = document.querySelector('.popup-dialog-menu');
-  let flag = false;
+  const popupRepairModal = document.querySelector('.popup-repair-types');
+        //popupDialogMenu = document.querySelector('.popup-dialog-menu');
+  
   document.addEventListener('click', (e)=>{
     let target = e.target;
     
     if(target.closest('.link-list-repair')){
-      popupRepairModal.classList.toggle('popup-repair-types-show');
-      popupDialogMenu.classList.remove('showHide-menu');
+      popupRepairModal.classList.add('popup-repair-types-show');
+     // popupDialogMenu.classList.remove('showHide-menu');
     }
     if ((target.matches('.close') && target.closest('.popup-repair-types')) || target.matches('.popup')) {
-      popupRepairModal.classList.toggle('popup-repair-types-show');
+      popupRepairModal.classList.remove('popup-repair-types-show');
     }
 
   });

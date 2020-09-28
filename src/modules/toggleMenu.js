@@ -26,7 +26,7 @@ const toggleMenu = () => {
       popupMenu.style.visibility = 'visible';
       handlerMenu();
     }
-    if (target.matches('.close-menu')) {
+    if (target.matches('.close-menu') || target.matches('.popup')) {
       popupMenu.style.visibility = 'hidden';
       handlerMenu();
     }

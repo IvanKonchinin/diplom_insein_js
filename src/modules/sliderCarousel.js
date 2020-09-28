@@ -37,6 +37,7 @@ class SliderCarousel {
       this.controlSlider();
     }
     if (this.responsive) {
+      
       this.responsInit();
     }
   }
@@ -132,6 +133,7 @@ class SliderCarousel {
     const maxResponse = Math.max(...allRespone);
 
     const checkResponse = () => {
+      
       const widthWindow = document.documentElement.clientWidth;
       if (widthWindow < maxResponse) {
         for (let i = 0; i < allRespone.length; i++) {
@@ -139,6 +141,7 @@ class SliderCarousel {
             this.slidesToShow = this.responsive[i].slidesToShow;
             this.options.widthSlide = Math.floor(100 / this.slidesToShow);
             this.addStyle();
+            
           }
         }
       } else {

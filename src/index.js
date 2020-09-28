@@ -32,6 +32,7 @@ import PopupDesignSlider from './modules/popupDesignSliderClass';
 import popupConsultation from './modules/popupConsultation';
 import testimonialsSlider from './modules/testimonialsSlider';
 import schemeTabs from './modules/schemeTabs';
+import faqAkkordeon from './modules/faqAkkordeon';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -58,6 +59,7 @@ disainPopupTabs();
 popupConsultation();
 testimonialsSlider();
 schemeTabs();
+faqAkkordeon();
 
 const newDisainSlider1 = new DisainSliderPaginationProto('.designs-slider__style1', '.scand');
 const newDisainSlider2 = new DisainSliderPaginationProto('.designs-slider__style2', '.trad');

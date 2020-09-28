@@ -29,6 +29,7 @@ import popupDesign from './modules/popupDesign';
 import disainPopupTabs from './modules/disainPopupTabs';
 import popupDesignSlider from './modules/popupDesignSlider';
 import PopupDesignSlider from './modules/popupDesignSliderClass';
+import popupConsultation from './modules/popupConsultation';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -52,6 +53,7 @@ tabs();
 disainSliderMobile();
 popupDesign();
 disainPopupTabs();
+popupConsultation();
 
 const newDisainSlider1 = new DisainSliderPaginationProto('.designs-slider__style1', '.scand');
 const newDisainSlider2 = new DisainSliderPaginationProto('.designs-slider__style2', '.trad');

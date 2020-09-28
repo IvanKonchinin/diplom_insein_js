@@ -33,7 +33,7 @@ import popupConsultation from './modules/popupConsultation';
 import testimonialsSlider from './modules/testimonialsSlider';
 import schemeTabs from './modules/schemeTabs';
 import faqAkkordeon from './modules/faqAkkordeon';
-
+import startCarousel from './modules/sliderCarousel';
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
 phoneList();
@@ -60,6 +60,7 @@ popupConsultation();
 testimonialsSlider();
 schemeTabs();
 faqAkkordeon();
+startCarousel();
 
 const newDisainSlider1 = new DisainSliderPaginationProto('.designs-slider__style1', '.scand');
 const newDisainSlider2 = new DisainSliderPaginationProto('.designs-slider__style2', '.trad');
@@ -82,6 +83,8 @@ newPopupDesignSlider2.init();
 newPopupDesignSlider3.init();
 newPopupDesignSlider4.init();
 newPopupDesignSlider5.init();
+
+
 
 
 

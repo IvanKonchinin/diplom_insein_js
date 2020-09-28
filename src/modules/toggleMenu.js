@@ -2,10 +2,6 @@ const toggleMenu = () => {
   const popupMenu = document.querySelector('.popup-menu'),
         popupDialogMenu = document.querySelector('.popup-dialog-menu');
 
-  const handlerMenu = () => {
-    popupDialogMenu.classList.toggle('showHide-menu');
-  }
-
   const scrollMenuItems = (e) => {
 
     let target = e.target;
@@ -24,16 +20,16 @@ const toggleMenu = () => {
     
     if (target.matches('.menu__icon')) {
       popupMenu.style.visibility = 'visible';
-      handlerMenu();
+      popupDialogMenu.classList.add('showHide-menu');
     }
     if (target.matches('.close-menu') || target.matches('.popup')) {
       popupMenu.style.visibility = 'hidden';
-      handlerMenu();
+      popupDialogMenu.classList.remove('showHide-menu');
     }
     if ((target.tagName === 'A' && target.closest('popup-menu-nav__item')) || target.closest('a') && target.closest('.popup-menu-nav__item')) {
       scrollMenuItems(e);
       popupMenu.style.visibility = 'hidden';
-      handlerMenu();
+      popupDialogMenu.classList.remove('showHide-menu');
     }
     if (target.closest('.button-footer')){
       scrollMenuItems(e);

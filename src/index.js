@@ -35,6 +35,8 @@ import schemeTabs from './modules/schemeTabs';
 import faqAkkordeon from './modules/faqAkkordeon';
 import startCarousel from './modules/sliderCarousel';
 import schemeSliderTabsMobile from './modules/schemeSliderTabsMobile';
+import sendForms from './modules/sendForms';
+import popupThank from './modules/popupThank';
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
 phoneList();
@@ -63,6 +65,8 @@ schemeTabs();
 faqAkkordeon();
 startCarousel();
 schemeSliderTabsMobile();
+sendForms();
+popupThank();
 
 const newDisainSlider1 = new DisainSliderPaginationProto('.designs-slider__style1', '.scand');
 const newDisainSlider2 = new DisainSliderPaginationProto('.designs-slider__style2', '.trad');

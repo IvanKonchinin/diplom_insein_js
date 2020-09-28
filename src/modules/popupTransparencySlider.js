@@ -11,7 +11,6 @@ const popupTransparencySlider = () => {
 
   const setCounter = () => { //счетчик слайдов +
     [...slide].forEach((item)=>{
-       console.log(item.matches('.popup-transparency-slider__slide-show'));
       if (item.matches('.popup-transparency-slider__slide-show')) {
         let itemDataNum = item.dataset.num;
         sliderCounterContentCurrent.textContent = itemDataNum;

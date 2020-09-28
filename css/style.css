@@ -6563,6 +6563,9 @@ strong {
 .repair-types-slider .hide {
   display:none;
 }
+.popup-design-slider .hide{
+  display: none;
+}
 .repair-types-slider .show {
   display: flex;
 }
@@ -6582,6 +6585,10 @@ strong {
 }
 .popup-transparency-slider__slide-show{
   display: block;
+}
+
+.popup-design-slider__style-slide.hide{
+  display: none;
 }
 
   

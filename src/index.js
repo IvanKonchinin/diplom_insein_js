@@ -23,7 +23,12 @@ import popupTransparency from './modules/popupTransparency';
 import popupTransparencySlider from './modules/popupTransparencySlider';
 import startProblemsPopup from './modules/startProblemsPopup';
 import tabs from './modules/disainTabs';
-import disainSliderMobile from './modules/disainSliderMobile';
+import disainSliderMobile from './modules/disainSliderTabsMobile';
+import DisainSliderPaginationProto from './modules/disainSliderPaginationProto';
+import popupDesign from './modules/popupDesign';
+import disainPopupTabs from './modules/disainPopupTabs';
+import popupDesignSlider from './modules/popupDesignSlider';
+import PopupDesignSlider from './modules/popupDesignSliderClass';
 
 import {RepairTypesSlider, startSliders} from './modules/repairTypesSlider';
 
@@ -45,5 +50,30 @@ popupTransparencySlider();
 startProblemsPopup();
 tabs();
 disainSliderMobile();
+popupDesign();
+disainPopupTabs();
+
+const newDisainSlider1 = new DisainSliderPaginationProto('.designs-slider__style1', '.scand');
+const newDisainSlider2 = new DisainSliderPaginationProto('.designs-slider__style2', '.trad');
+const newDisainSlider3 = new DisainSliderPaginationProto('.designs-slider__style3', '.loft');
+const newDisainSlider4 = new DisainSliderPaginationProto('.designs-slider__style4', '.minimal');
+const newDisainSlider5 = new DisainSliderPaginationProto('.designs-slider__style5', '.modern');
+newDisainSlider1.init();
+newDisainSlider2.init();
+newDisainSlider3.init();
+newDisainSlider4.init();
+newDisainSlider5.init();
+
+const newPopupDesignSlider1 = new PopupDesignSlider('.popup-designs-slider__style1');
+const newPopupDesignSlider2 = new PopupDesignSlider('.popup-designs-slider__style2');
+const newPopupDesignSlider3 = new PopupDesignSlider('.popup-designs-slider__style3');
+const newPopupDesignSlider4 = new PopupDesignSlider('.popup-designs-slider__style4');
+const newPopupDesignSlider5 = new PopupDesignSlider('.popup-designs-slider__style5');
+newPopupDesignSlider1.init();
+newPopupDesignSlider2.init();
+newPopupDesignSlider3.init();
+newPopupDesignSlider4.init();
+newPopupDesignSlider5.init();
+
 
 

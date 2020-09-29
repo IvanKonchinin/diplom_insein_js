@@ -1,7 +1,7 @@
 const popupPortfolioSlider = () => {
   const wrap = document.querySelector('.popup-portfolio-slider-wrap'), //wrap
         track = document.querySelector('.popup-portfolio-slider'), //track
-        slides = document.querySelectorAll('.popup-portfolio-slider__slide'), //slides
+        slides = track.querySelectorAll('.popup-portfolio-slider__slide'), //slides
         prev = wrap.querySelector('#popup_portfolio_left'), //prev
         next = wrap.querySelector('#popup_portfolio_right'), //next
         slidesCount = slides.length, //slidesCount

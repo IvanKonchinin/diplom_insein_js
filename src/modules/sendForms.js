@@ -17,13 +17,15 @@ const sendForms = () => {
 
     const formData = new FormData(target);
     let phoneInput = target.querySelector('input[name="phone"]');
+    let nameInput = target.querySelector('input[name="name"]') ? target.querySelector('input[name="name"]').value : true;
     
     let body = {};
 
     formData.forEach((val, key) => {
       body[key] = val;
     });
-    if (phoneInput.value.length === 17) {
+    if (/^\+\d{1,3}\s?\(\d{3}\)\s?\d{3}(-\d{2}){2}$/.test(phoneInput.value) && nameInput) {
+      
       phoneInput.style.border = '';
       target.appendChild(statusMessage);
       statusMessage.insertAdjacentHTML('afterbegin', loadMessage);
@@ -43,7 +45,7 @@ const sendForms = () => {
         });
 
     } else {
-      target.style.cssText = 'border:2px solid red;background:#fff';
+      target.querySelector('input').style.cssText = 'border:2px solid red;';
       return;
     }
     clearInputsForms(target);
@@ -53,6 +55,7 @@ const sendForms = () => {
   const clearInputsForms = (target) => {
     let targetFormInputs = target.querySelectorAll('input');
     targetFormInputs.forEach((item) => {
+      item.style.border = '';
       item.value = '';
       item.checked = false;
     });

@@ -3,7 +3,7 @@ const repairTypesPopupTabs = () => {
   const tab = document.querySelectorAll('.popup-repair-types-nav__item');
   const preview = document.querySelectorAll('.popup-repair-types-content__head-title');
   const tabContent = document.querySelector('.popup-repair-types-content-table').children;
-console.log(tabContent[0]);
+
   const toggleTabContent = (index) => {
     for (let i = 0; i < tabContent.length; i++) {
       if (index === i) {
@@ -120,14 +120,12 @@ const setDataTable = (data) => {
 
 const popupRepairTypesModal = () => {
   const popupRepairModal = document.querySelector('.popup-repair-types');
-        //popupDialogMenu = document.querySelector('.popup-dialog-menu');
-  
+
   document.addEventListener('click', (e)=>{
     let target = e.target;
     
-    if(target.closest('.link-list-repair')){
+    if (target.closest('.link-list-repair') || target.closest('.link-list-menu')) {
       popupRepairModal.classList.add('popup-repair-types-show');
-     // popupDialogMenu.classList.remove('showHide-menu');
     }
     if ((target.matches('.close') && target.closest('.popup-repair-types')) || target.matches('.popup')) {
       popupRepairModal.classList.remove('popup-repair-types-show');

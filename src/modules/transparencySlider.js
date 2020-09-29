@@ -15,7 +15,7 @@ const transparencySlider = () => {
      wrap.addEventListener('click', (event) => {
        event.preventDefault();
        let target = event.target;
-      console.log(target.closest('.slider-arrow'));
+   
        if (!target.closest('.slider-arrow')) {
          return;
        }

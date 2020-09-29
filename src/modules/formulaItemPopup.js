@@ -3,8 +3,7 @@ const visible = function (target) {
 
      let targetBlockHeight = target.clientHeight;
      let targetBlockDescHeight = target.closest('.formula-item').querySelector('.formula-item__descr').clientHeight;
-    // let heightTargetBlock = (target.closest('.formula-item').getBoundingClientRect().bottom) - target.closest('.formula-item').clientHeight;
-    console.log(targetBlockHeight);
+    
   if (target.getBoundingClientRect().top < 0) {
     target.classList.add('active');
     target.style.bottom = '-' + (targetBlockHeight + targetBlockDescHeight + 10) + 'px';

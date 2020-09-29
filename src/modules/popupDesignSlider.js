@@ -26,7 +26,6 @@ const popupDesignSlider = () => {
         event.preventDefault();
         let target = event.target;
         
-        console.log(target.closest('#popup_design_right'));
         prevSlide(slides, currentSlide, 'hide');
 
         if (target.closest('#popup_design_right')) {

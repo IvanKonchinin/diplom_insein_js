@@ -15,18 +15,12 @@ const disainPopupTabs = () => {
     
     [...tabContent].forEach((item, i) => {
         
-
       if (!item.classList.contains('hide')) {
         sliderCounterContentTotal.textContent = item.children.length;
-        
       }
     });
-
- 
   };
  
-
-
   const toggleTabContent = (index) => {
     for (let i = 0; i < tabContent.length; i++) {
       if (index === i) {

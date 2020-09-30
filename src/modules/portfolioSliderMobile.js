@@ -2,12 +2,13 @@ const portfolioSliderMobile = () => {
   let position = 0;
   let count = 1;
   const wrap = document.querySelector('.portfolio-slider-wrap'); //wrap
-  const slides = document.querySelectorAll('.portfolio-slider-mobile .portfolio-slider__slide-frame'); //slides
-  const prev = document.querySelector('.portfolio-slider-wrap #portfolio-arrow-mobile_left'); //prev
-  const next = document.querySelector('.portfolio-slider-wrap #portfolio-arrow-mobile_right'); //next
+  const portfolioSliderMobile = document.querySelector('.portfolio-slider-mobile'); 
+  const slides = portfolioSliderMobile.querySelectorAll('.portfolio-slider__slide-frame'); //slides
+  const prev = document.querySelector('.slider-arrow-tablet-mobile_left'); //prev
+  const next = document.querySelector('.slider-arrow-tablet-mobile_right'); //next
   const slidesCount = slides.length; //slidesCount
   const sliderCounterContentCurrent = wrap.querySelector('.slider-counter-content__current'); //счетчик текущего слайда
-  const slideWidth = slides[0].offsetWidth;//ширина слайда
+  let slideWidth = (slides[0].offsetWidth) ? slides[0].offsetWidth : 352; //ширина слайда
   let slidesToShow = 1;
   const slidesToScroll = 1;
   const movePosition = slidesToScroll * slideWidth;//ширина передвижения слайдов
@@ -52,9 +53,14 @@ const portfolioSliderMobile = () => {
   sliderPrev();
 
   const checkBtn = () => {//вкл/выкл кнопок
-    prev.style.display = position === 0 ? 'none' : 'flex';
-    next.style.display = (position <= -(slidesCount - slidesToShow) * slideWidth) ? 'none' : 'flex';
+    (position === 0) ? prev.classList.add('hide') : prev.classList.remove('hide');
+    (position <= -(slidesCount - slidesToShow) * slideWidth) ? next.classList.add('hide') : next.classList.remove('hide');
   };
+
+  window.addEventListener('resize', ()=>{
+    checkBtn();
+  });
+
   checkBtn();
 }
 

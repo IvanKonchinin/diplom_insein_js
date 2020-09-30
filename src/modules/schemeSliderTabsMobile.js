@@ -8,6 +8,10 @@ const schemeSliderTabsMobile = () => {
   const slidesToShow = 1;
   let count = 0;
 
+   window.addEventListener('resize', () => {
+     if (window.innerWidth > 1024) navListRepair.style.transform = 'translateX(0)';
+   });
+
   const slidesWidth = () => {
     let itemWidthArr = [];
     repairTypesNavItem.forEach((item) => {

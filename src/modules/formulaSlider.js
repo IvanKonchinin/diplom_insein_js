@@ -1,4 +1,4 @@
-class SliderCarousel {
+class formulaSliderCarousel {
   constructor({
     main,
     wrap,
@@ -37,7 +37,7 @@ class SliderCarousel {
       this.controlSlider();
     }
     if (this.responsive) {
-      
+
       this.responsInit();
     }
   }
@@ -72,6 +72,7 @@ class SliderCarousel {
         justify-content:center;
         align-items: center;
         flex: 0 0 ${this.options.widthSlide}%;
+        align-self: baseline;
       }
       .glo-slider__prev, .glo-slider__next{
         margin: 0 10px;
@@ -133,7 +134,7 @@ class SliderCarousel {
     const maxResponse = Math.max(...allRespone);
 
     const checkResponse = () => {
-      
+
       const widthWindow = document.documentElement.clientWidth;
       if (widthWindow < maxResponse) {
         for (let i = 0; i < allRespone.length; i++) {
@@ -141,7 +142,7 @@ class SliderCarousel {
             this.slidesToShow = this.responsive[i].slidesToShow;
             this.options.widthSlide = Math.floor(100 / this.slidesToShow);
             this.addStyle();
-            
+
           }
         }
       } else {
@@ -155,12 +156,12 @@ class SliderCarousel {
   }
 }
 
-const startCarousel = () => {
+const startFormulaCarousel = () => {
   const options = {
-    main: '#partners .wrapper',
-    wrap: '.partners-slider',
-    prev: '#partners-arrow_left',
-    next: '#partners-arrow_right',
+    main: '.formula-slider-wrap',
+    wrap: '.formula-slider',
+    prev: '#formula-arrow_left',
+    next: '#formula-arrow_right',
     slidesToShow: 3,
     infinity: true,
     responsive: [{
@@ -178,9 +179,9 @@ const startCarousel = () => {
     ]
   }
 
-  const carousel = new SliderCarousel(options);
+  const carousel = new formulaSliderCarousel(options);
 
   carousel.init();
 };
 
-export default startCarousel;
+export default startFormulaCarousel;

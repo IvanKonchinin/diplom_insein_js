@@ -1,10 +1,10 @@
 const portfolioSliderDesctop = () => {
   const wrap = document.querySelector('.portfolio-slider');//wrap
   const slides = document.querySelectorAll('.portfolio-slider__slide');//slides
-  const prev = document.getElementById('portfolio-arrow_left'); //prev
-  const next = document.getElementById('portfolio-arrow_right'); //next
+  const prev = document.querySelector('.slider-arrow_left-portfolio'); //prev
+  const next = document.querySelector('.slider-arrow_right-portfolio'); //next
   const slidesCount = slides.length; //slidesCount
-  const slideWidth = slides[0].offsetWidth;
+  let slideWidth = (slides[0].offsetWidth) ? slides[0].offsetWidth : 352; //ширина слайда
   let slidesToShow = 1;
   const slidesToScroll = 1;
   const movePosition = slidesToScroll * slideWidth;
@@ -56,9 +56,14 @@ const portfolioSliderDesctop = () => {
     sliderPrev();
 
   const checkBtn = () => {
-    prev.style.display = position === 0 ? 'none' : 'flex';
-    next.style.display = (position <= -(slidesCount - slidesToShow) * slideWidth) ? 'none' : 'flex';
+    (position === 0) ? prev.classList.add('hide') : prev.classList.remove('hide');
+    (position <= -(slidesCount - slidesToShow) * slideWidth) ? next.classList.add('hide') : next.classList.remove('hide');
   };
+
+   window.addEventListener('resize', () => {
+     checkBtn();
+   });
+
   checkBtn();
 };
 

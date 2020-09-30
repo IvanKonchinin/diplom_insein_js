@@ -1,19 +1,38 @@
 const sendForms = () => {
 
   const errorMessage = 'Что-то пошло не так...',
-        loadMessage = `Отправка...`;
+        loadMessage = `Отправка...`,
+        checkboxMessage = `Необходимо согласиться с политикой конфиденциальности`;
 
   const statusMessage = document.createElement('div');
+  const statusSubmit = document.createElement('div');
   const popupThank = document.querySelector('.popup-thank');
   
   statusMessage.style.cssText = `font-size:1.4rem;color:#000000`;
+  statusSubmit.classList.add('status-submit');
+  
 
   document.addEventListener('submit', (event) => {
     event.preventDefault();
     let target = event.target;
     const targetCheckbox = target.closest('form').querySelector('input[type="checkbox"]');
+    
+    if (!targetCheckbox.checked) {
+      
+      if(!target.querySelector('input[name="name"]')){
+        statusSubmit.style.bottom = '-10px';
+      }else{
+        statusSubmit.style.bottom = '-50px';
+      }
+      target.appendChild(statusSubmit);
 
-    if (!targetCheckbox.checked) return;
+      statusSubmit.insertAdjacentHTML('afterbegin', checkboxMessage);
+      setTimeout(() => {
+        statusSubmit.remove();
+        statusSubmit.textContent = '';
+      }, 2000);
+      return;
+    }
 
     const formData = new FormData(target);
     let phoneInput = target.querySelector('input[name="phone"]');

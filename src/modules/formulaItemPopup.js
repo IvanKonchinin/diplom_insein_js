@@ -1,6 +1,6 @@
 const visible = function (target) {
   target = target.querySelector('.formula-item-popup');
-
+  if(target.closest('.row') === null) return;
      let targetBlockHeight = target.clientHeight;
      let targetBlockDescHeight = target.closest('.formula-item').querySelector('.formula-item__descr').clientHeight;
     

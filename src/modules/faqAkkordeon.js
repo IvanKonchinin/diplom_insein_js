@@ -16,10 +16,6 @@ const faqAkkordeon = () => {
     let target = e.target;
     target = target.closest('.title_block');
 
-    if (target.classList.contains('msg-active')){
-      target.classList.remove('msg-active');
-      return;
-    }
     if (target) {
       accordeonitems.forEach((item, i) => {
         if (item === target) {
